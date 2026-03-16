@@ -2,9 +2,8 @@
 FROM node:20-alpine AS build
 WORKDIR /app
 
-# Copiamos package.json y .npmrc para que npm tenga el token
+# Copiamos solo package.json y package-lock.json
 COPY package*.json ./
-COPY .npmrc /root/.npmrc
 
 # Instalamos dependencias
 RUN npm install
