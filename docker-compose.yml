@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  micro-app:
+    build: ./micro-app
+    container_name: micro-app
+    ports:
+      - "4173:80"
+
+  container:
+    build: ./container-app
+    container_name: container
+    ports:
+      - "5001:80"
+    depends_on:
+      - micro-app
