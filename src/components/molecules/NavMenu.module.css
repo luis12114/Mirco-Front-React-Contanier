@@ -1,0 +1,184 @@
+/* ─── Desktop nav row ─────────────────────────────────── */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ─── Skeleton row ────────────────────────────────────── */
+.skeletonNav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ─── Backdrop ────────────────────────────────────────── */
+.backdrop {
+  display: none;
+}
+
+/* ─── Mobile drawer ───────────────────────────────────── */
+.drawer {
+  display: none;
+}
+
+/* ══════════════════════════════════════════════════════
+   MOBILE
+   ══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .skeletonNav {
+    display: none;
+  }
+
+  /* Dim backdrop */
+  .backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    top: 60px;
+    background-color: transparent;
+    z-index: 9998;
+    pointer-events: none;
+    transition: background-color 0.35s ease;
+  }
+
+  .backdropVisible {
+    background-color: var(--color-overlay);
+    pointer-events: all;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  /* Drawer panel */
+  .drawer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px; /* below the sticky header */
+    right: 0;
+    bottom: 0;
+    width: min(320px, 88vw);
+    background-color: var(--color-bg);
+    z-index: 9999;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    box-shadow: var(--shadow-2xl);
+
+    /* Closed */
+    transform: translateX(100%);
+    transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .drawerOpen {
+    transform: translateX(0);
+  }
+
+  /* ── Branded header ─────────────────────────────────── */
+  .drawerHeader {
+    background: var(--blue-600);
+    padding: 28px 24px 24px;
+    flex-shrink: 0;
+  }
+
+  .drawerBrand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .drawerBrandIcon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-2xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+  }
+
+  .drawerBrandName {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .drawerBrandSub {
+    font-size: var(--text-xs);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: var(--space-1);
+    line-height: 1.3;
+  }
+
+  /* ── Nav section ────────────────────────────────────── */
+  .drawerNav {
+    flex: 1;
+    padding: 20px 16px 8px;
+  }
+
+  .drawerSectionLabel {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0 var(--space-4);
+    margin-bottom: var(--space-2);
+  }
+
+  /* Staggered entry */
+  .drawerOpen .drawerNav a:nth-child(1) { animation: drawerItemIn 0.3s 0.05s cubic-bezier(0.32, 0.72, 0, 1) both; }
+  .drawerOpen .drawerNav a:nth-child(2) { animation: drawerItemIn 0.3s 0.10s cubic-bezier(0.32, 0.72, 0, 1) both; }
+  .drawerOpen .drawerNav a:nth-child(3) { animation: drawerItemIn 0.3s 0.15s cubic-bezier(0.32, 0.72, 0, 1) both; }
+  .drawerOpen .drawerNav a:nth-child(4) { animation: drawerItemIn 0.3s 0.20s cubic-bezier(0.32, 0.72, 0, 1) both; }
+
+  /* ── Footer ─────────────────────────────────────────── */
+  .drawerFooter {
+    padding: 0 16px 32px;
+    flex-shrink: 0;
+    animation: drawerItemIn 0.3s 0.28s cubic-bezier(0.32, 0.72, 0, 1) both;
+
+    /* Only animate when open */
+    animation-play-state: paused;
+  }
+
+  .drawerOpen .drawerFooter {
+    animation-play-state: running;
+  }
+
+  .drawerDivider {
+    height: 1px;
+    background: var(--gray-100);
+    margin-bottom: var(--space-5);
+  }
+
+  /* Full-width button inside footer */
+  .drawerFooter a,
+  .drawerFooter button {
+    width: 100%;
+    justify-content: center;
+    padding: 14px var(--space-6);
+    font-size: var(--text-base);
+    border-radius: var(--radius-xl);
+  }
+}
+
+@keyframes drawerItemIn {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

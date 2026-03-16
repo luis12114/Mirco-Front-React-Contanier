@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* ─── Icon box ─────────────────────────────────────────── */
+.icon {
+  width: 36px;
+  height: 36px;
+  background-color: var(--blue-600);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wrapper:hover .icon {
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px var(--brand-shadow-logo);
+}
+
+.iconText {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+/* ─── Brand name ───────────────────────────────────────── */
+.brand {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -0.01em;
+  user-select: none;
+}
+
+.brandInverted {
+  color: var(--color-white);
+}
+
+/* ─── Skeleton ─────────────────────────────────────────── */
+.skeletonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skeletonIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.skeletonBrand {
+  width: 48px;
+  height: 20px;
+  border-radius: 4px;
+}

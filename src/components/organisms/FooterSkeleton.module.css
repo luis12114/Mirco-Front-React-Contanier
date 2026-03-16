@@ -1,0 +1,152 @@
+/* ─── Override skeleton shimmer for dark background ──── */
+.footer {
+  background-color: var(--footer-bg);
+  padding: var(--space-16) 0 0;
+
+  /* Darker shimmer palette so it's visible on --slate-900 */
+  --skeleton-base:      #1e2d45;
+  --skeleton-highlight: #263654;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+/* ─── Top grid ─────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  padding-bottom: var(--space-12);
+}
+
+/* ─── Brand column ─────────────────────────────────────── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 400px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.descBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ─── Nav columns ──────────────────────────────────────── */
+.navColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+.navCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.navHeading {
+  margin-bottom: var(--space-2);
+}
+
+/* ─── Divider ──────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background-color: var(--footer-border);
+  margin: 0;
+}
+
+/* ─── Bottom bar ───────────────────────────────────────── */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) 0;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.legalGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.socialGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ─── Copyright ────────────────────────────────────────── */
+.copyright {
+  padding: var(--space-5) 0 var(--space-8);
+  border-top: 1px solid var(--footer-border-faint);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.copyrightLine {
+  max-width: 100%;
+}
+
+/* ──────────────────────────────────────────────────────────
+   RESPONSIVE — tablet
+   ────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .brand {
+    max-width: 100%;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────
+   RESPONSIVE — mobile
+   ────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .inner {
+    padding: 0 var(--space-5);
+  }
+
+  .navColumns {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copyright {
+    padding: var(--space-4) 0 var(--space-6);
+  }
+}

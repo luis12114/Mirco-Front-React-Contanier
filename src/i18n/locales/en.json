@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "home": "Home",
+    "benefits": "Benefits",
+    "solutions": "Solutions",
+    "contact": "Contact",
+    "cta": "Request information",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "ariaLabel": "Main navigation"
+  },
+  "footer": {
+    "description": "Payment and Transfer System. Cutting-edge technology infrastructure to process digital payments quickly, securely and efficiently.",
+    "address": "Av. Insurgentes Sur 1602, Mexico City",
+    "phone": "+52 55 1234 5678",
+    "email": "contact@stp.com.mx",
+    "ariaLabel": "Footer",
+    "legalAriaLabel": "Legal",
+    "productHeading": "Product",
+    "companyHeading": "Company",
+    "productLinks": {
+      "features": "Features",
+      "integrations": "Integrations",
+      "docs": "Documentation",
+      "pricing": "Pricing",
+      "api": "API Reference"
+    },
+    "companyLinks": {
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "support": "Support",
+      "contact": "Contact"
+    },
+    "legalLinks": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "legal": "Legal Notice"
+    },
+    "copyright": "© 2026 Sistema de Transferencias y Pagos, S.A. de C.V. All rights reserved.",
+    "regulated": "Institution regulated by CNBV and Banco de México"
+  },
+  "lang": {
+    "switchLabel": "Switch language to Spanish",
+    "switchCode": "ES",
+    "currentCode": "EN",
+    "currentFull": "English"
+  }
+}
