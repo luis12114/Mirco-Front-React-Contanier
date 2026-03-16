@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Mirco-Front-React-Contanier
 =======
 # React + TypeScript + Vite
