@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 
+
+
 export default defineConfig({
   plugins: [
     react(),
@@ -25,7 +27,7 @@ export default defineConfig({
   server: {
     cors: true, // habilita CORS para todos los orígenes
     port: 5001,
-    host: true 
+    host: true
   }
 
 });
