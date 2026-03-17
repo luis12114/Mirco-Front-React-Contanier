@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect } from "react";
 import Header from "./components/organisms/Header";
 import Footer from "./components/organisms/Footer";
+import Spinner from "./components/atoms/Spinner";
 
 const RemoteApp = React.lazy(() => import("microapp/App"));
 
@@ -17,8 +18,8 @@ function App() {
       <Header loadingDelay={1200} />
 
       <main style={{ flex: 1 }}>
-        <Suspense fallback={<div style={{ padding: "2rem" }}>Cargando microfrontend…</div>}>
-          <RemoteApp />
+        <Suspense fallback={<Spinner />}> 
+          <RemoteApp /> 
         </Suspense>
       </main>
 
