@@ -10,7 +10,7 @@ export default defineConfig({
     federation({
       name: "container",
       remotes: {
-        microapp: "http://localhost:4173/assets/remoteEntry.js"
+        microapp: "https://micro-app-react.netlify.app/assets/remoteEntry.js"
       },
       shared: ["react", "react-dom"]
     })
