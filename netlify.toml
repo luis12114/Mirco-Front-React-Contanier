@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[context.production.environment]
+  VITE_MICROAPP_URL = "https://micro-app-react.netlify.app/assets/remoteEntry.js"
+
+[context.deploy-preview.environment]
+  VITE_MICROAPP_URL = "http://localhost:4173/assets/remoteEntry.js"

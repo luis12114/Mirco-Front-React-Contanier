@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 
-
+const remoteUrl = process.env.VITE_MICROAPP_URL || 'http://localhost:4173/assets/remoteEntry.js';
 
 export default defineConfig({
   plugins: [
@@ -10,7 +10,7 @@ export default defineConfig({
     federation({
       name: "container",
       remotes: {
-        microapp: "https://micro-app-react.netlify.app/assets/remoteEntry.js"
+        microapp: remoteUrl
       },
       shared: ["react", "react-dom"]
     })
