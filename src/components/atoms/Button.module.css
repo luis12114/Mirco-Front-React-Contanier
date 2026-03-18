@@ -58,7 +58,7 @@
 
 .md {
   padding: 11px var(--space-6);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
 }
 
 .lg {

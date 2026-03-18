@@ -58,7 +58,6 @@
   width: 28px;
   height: 28px;
   border-radius: var(--radius-md);
-  background-color: var(--brand-icon-bg);
   color: var(--blue-400);
   flex-shrink: 0;
 }

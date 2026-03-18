@@ -34,7 +34,7 @@
 
 /* ─── Brand name ───────────────────────────────────────── */
 .brand {
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--gray-900);
   letter-spacing: -0.01em;
